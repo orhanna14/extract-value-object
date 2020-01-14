@@ -15,16 +15,6 @@ class ReportCard
   end
 
   def grade_score(score)
-    if score < 60
-      'F'
-    elsif score < 70
-      'D'
-    elsif score < 80
-      'C'
-    elsif score < 90
-      'B'
-    else
-      'A'
-    end
+    GradeScores.new(score).letter_grade(score)
   end
 end
